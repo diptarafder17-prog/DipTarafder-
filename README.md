@@ -71,17 +71,3 @@ This project showcases a stylish profile card with a toggleable panel for detail
 
 ---
 
-## 📌 Future Improvements
-
-- Add **keyboard accessibility** (ARIA labels, key controls).  
-- Integrate **contact form** with validation.  
-- Enhance **animation timing** for smoother transitions.  
-- Optionally separate CSS/JS into external files for scalability.
-
----
-
-## 🖊️ Author
-
-**Dip Tarafder**  
-Designer • Gamer • Musician  
-Official Contact Page Project
