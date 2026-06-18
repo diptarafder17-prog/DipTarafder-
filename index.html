@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CONTACT • DIP TARAFDER</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#04020b,
+#10182f
+);
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+url("https://i.postimg.cc/65m2f6sz/1780949883702.png");
+
+background-size:cover;
+
+background-position:center;
+
+filter:
+blur(4px)
+brightness(.55);
+
+transform:scale(1.08);
+
+animation:
+zoom 22s infinite ease;
+
+}
+
+@keyframes zoom{
+
+50%{
+transform:
+scale(1.15);
+}
+
+}
+
+/* ABOUT BUTTON */
+
+.about{
+
+position:relative;
+
+z-index:20;
+
+width:260px;
+
+height:260px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:40px;
+
+overflow:hidden;
+
+backdrop-filter:blur(18px);
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.06),
+rgba(255,255,255,.02)
+);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.55);
+
+color:white;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:16px;
+
+transition:.4s;
+
+}
+
+.about:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+}
+
+.about::before{
+
+content:"";
+
+position:absolute;
+
+inset:-60%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(107,231,255,.18),
+transparent
+);
+
+animation:
+shine 6s linear infinite;
+
+}
+
+@keyframes shine{
+
+100%{
+transform:
+translateX(350%);
+}
+
+}
+
+.about img{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid rgba(255,255,255,.15);
+
+z-index:2;
+
+}
+
+.about h2{
+
+font-size:26px;
+
+z-index:2;
+
+}
+
+.about p{
+
+opacity:.8;
+
+z-index:2;
+
+}
+
+/* PANEL */
+
+.panel{
+
+position:fixed;
+
+left:50%;
+
+top:50%;
+
+transform:
+translate(-50%,-50%)
+scale(.85);
+
+opacity:0;
+
+pointer-events:none;
+
+width:420px;
+
+max-width:92vw;
+
+padding:28px;
+
+border-radius:34px;
+
+background:
+linear-gradient(
+180deg,
+rgba(10,14,28,.95),
+rgba(14,18,36,.95)
+);
+
+backdrop-filter:
+blur(28px);
+
+box-shadow:
+0 40px 100px rgba(0,0,0,.65);
+
+transition:.35s;
+
+z-index:50;
+
+color:white;
+
+}
+
+.panel.open{
+
+opacity:1;
+
+transform:
+translate(-50%,-50%)
+scale(1);
+
+pointer-events:auto;
+
+}
+
+.close{
+
+position:absolute;
+
+right:18px;
+
+top:18px;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:.8;
+
+}
+
+.profile{
+
+text-align:center;
+
+}
+
+.profile img{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid rgba(107,231,255,.18);
+
+box-shadow:
+0 0 40px rgba(107,231,255,.18);
+
+}
+
+.name{
+
+margin-top:18px;
+
+font-size:30px;
+
+font-weight:800;
+
+}
+
+.role{
+
+margin-top:6px;
+
+opacity:.8;
+
+}
+
+.row{
+
+margin-top:22px;
+
+padding:14px;
+
+border-radius:18px;
+
+background:
+rgba(255,255,255,.04);
+
+display:flex;
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.row i{
+
+font-size:22px;
+
+width:36px;
+
+color:#6be7ff;
+
+}
+
+.row a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.footer{
+
+margin-top:18px;
+
+text-align:center;
+
+opacity:.65;
+
+}
+
+@media(max-width:480px){
+
+.about{
+
+width:220px;
+
+height:230px;
+
+}
+
+.about img{
+
+width:100px;
+
+height:100px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="about" id="open">
+
+<img
+src="https://i.postimg.cc/brFbb6tf/2026-06-18-20-04-10-481-0600-2.jpg"
+alt="Dip Profile">
+
+<h2>ABOUT</h2>
+
+<p>Tap To Open<br>@diptarafderr</></p>
+
+</button>
+
+<div class="panel" id="panel">
+
+<div class="close" id="close">
+✕
+</div>
+
+<div class="profile">
+
+<img
+src="https://i.postimg.cc/brFbb6tf/2026-06-18-20-04-10-481-0600-2.jpg"
+alt="Dip Profile">
+
+<div class="name">
+DIP TARAFDER
+</div>
+
+<div class="role">
+Designer • Gamer • Musician
+</div>
+
+</div>
+
+<div class="row">
+<i class="fa-solid fa-envelope"></i>
+<a href="mailto:diptarafder17@gmail.com">
+diptarafder17@gmail.com
+</a>
+</div>
+
+<div class="row">
+<i class="fa-solid fa-phone"></i>
++8801761613854
+</div>
+
+<div class="row">
+<i class="fa-brands fa-facebook"></i>
+<a href="https://www.facebook.com/share/1CWxsPp1KB/">
+Facebook
+</a>
+</div>
+
+<div class="row">
+<i class="fa-brands fa-instagram"></i>
+<a href="https://www.instagram.com/diptarafderr">
+Instagram
+</a>
+</div>
+
+<div class="footer">
+Dip Tarafder • Official
+</div>
+
+</div>
+
+<script>
+
+const open=
+document.getElementById("open");
+
+const panel=
+document.getElementById("panel");
+
+const close=
+document.getElementById("close");
+
+open.onclick=()=>{
+
+panel.classList.add("open");
+
+};
+
+close.onclick=()=>{
+
+panel.classList.remove("open");
+
+};
+
+window.onclick=(e)=>{
+
+if(e.target===panel){
+
+panel.classList.remove("open");
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
